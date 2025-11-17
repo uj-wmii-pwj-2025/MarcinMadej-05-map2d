@@ -73,7 +73,7 @@ public class Map2D_Imp<R,C,V> implements Map2D<R,C,V>{
         if (map2d.get(rowKey) == null){
             return Collections.emptyMap();
         } else {
-            return  map2d.get(rowKey);
+            return Collections.unmodifiableMap(map2d.get(rowKey));
         }
     }
 
